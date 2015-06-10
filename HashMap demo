@@ -1,0 +1,33 @@
+package maps;
+import java.util.*;
+public class HashMapDemo {
+
+	public static void main(String[] args) {
+		HashMap<String, Double> hm = new HashMap<String, Double>();
+		
+		hm.put("Jon", new Double(3497.36));
+		hm.put("Jeni", new Double(5839.76));
+		hm.put("Ralf", new Double(99.98));
+		hm.put("Todd", new Double(1773.16));
+		/**Get set of elements**/
+		Set<Map.Entry<String, Double>> set = hm.entrySet();
+		/**Show set of elements**/
+		for (Map.Entry<String, Double> me :set) {
+			System.out.print(me.getKey()+"\t"+me.getValue());
+			System.out.println();
+		}
+		
+		/**Add 1000 on Todd's pay**/
+		
+		double balance = hm.get("Todd")+1000;
+		
+		hm.put("Todd", balance);
+		for (Map.Entry<String, Double> me :set) {
+			System.out.print(me.getKey()+"\t"+me.getValue());
+			System.out.println();
+		}
+		
+
+	}
+
+}
